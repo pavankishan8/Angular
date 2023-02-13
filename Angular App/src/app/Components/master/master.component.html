@@ -1,0 +1,55 @@
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+  <table class="table table-striped table-bordered table-hover">
+    <tr>
+      <th>Employee ID</th>
+      <th>Employee Name</th>
+      <th>Employee Address</th>
+      <!-- <th>Image</th> -->
+      <th>Details</th>
+    </tr>
+    <tr *ngFor="let emp of employees">
+      <td>{{emp.id}}</td>
+      <td>{{emp.Name}}</td>
+      <td>{{emp.Address}}</td>
+      <!-- <td>
+        <img [src]="emp.Pic" height="50px" width="50px"/> -->
+
+        <button (click)= "onEdit(emp)" class="btn btn-primary" style="margin: 2px;" >Edit
+          <i class="fa fa-eye"></i>
+        </button>
+
+
+    </tr>
+  </table>
+</div>
+<div *ngIf="selectedEmp.Name" class="col-md-6">
+  <h2>Details </h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <img [src]="selectedEmp.Pic" width="100%">
+      </div>
+      <div class="col-md-8">
+        <p>
+          <input disable [(ngModel)]="selectedEmp.id" type="text">
+      </p>
+      <p>
+          <input [(ngModel)]="selectedEmp.Name" type="text">
+      </p>
+      <p>
+          <input [(ngModel)]="selectedEmp.Address" type="text">
+      </p>
+      <p>
+          <input [(ngModel)]="selectedEmp.Salary" type="text">
+      </p>
+      <p>
+        <button class="btn btn-success" style="width: 85px; margin: 5px;">Update</button>
+        <button class="btn btn-danger" style="width: 85px; margin: 5px;">Delete</button>
+      </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
