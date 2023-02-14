@@ -1,0 +1,9 @@
+h1{
+  color: white;
+  background-image: linear-gradient(to right, rgb(46, 196, 255), rgb(88, 231, 88));
+  border: solid 2px;
+  border-color: blue;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+}
