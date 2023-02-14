@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ImageFiles">
+    <Key>
+      <PropertyRef Name="EntryID" />
+    </Key>
+    <Property Name="EntryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlaceID" Type="int" Nullable="false" />
+    <Property Name="ImageSource" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tourism">
+    <Key>
+      <PropertyRef Name="PlaceID" />
+    </Key>
+    <Property Name="PlaceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Pincode" Type="bigint" Nullable="false" />
+    <Property Name="State" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Significance" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Description" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__ImageFile__Place__30C33EC3">
+    <End Role="Tourism" Type="Self.Tourism" Multiplicity="1" />
+    <End Role="ImageFiles" Type="Self.ImageFiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tourism">
+        <PropertyRef Name="PlaceID" />
+      </Principal>
+      <Dependent Role="ImageFiles">
+        <PropertyRef Name="PlaceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="ImageFiles" EntityType="Self.ImageFiles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tourism" EntityType="Self.Tourism" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__ImageFile__Place__30C33EC3" Association="Self.FK__ImageFile__Place__30C33EC3">
+      <End Role="Tourism" EntitySet="Tourism" />
+      <End Role="ImageFiles" EntitySet="ImageFiles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
