@@ -1,4 +1,5 @@
 <div class="container">
+  <h1 style="text-align: center; background-color: aquamarine;">Employee Table</h1>
 <div class="row">
 <div class="col-md-6">
   <table class="table table-striped table-bordered table-hover">
@@ -24,32 +25,7 @@
     </tr>
   </table>
 </div>
-<div *ngIf="selectedEmp.Name" class="col-md-6">
-  <h2>Details </h2>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <img [src]="selectedEmp.Pic" width="100%">
-      </div>
-      <div class="col-md-8">
-        <p>
-          <input disable [(ngModel)]="selectedEmp.id" type="text">
-      </p>
-      <p>
-          <input [(ngModel)]="selectedEmp.Name" type="text">
-      </p>
-      <p>
-          <input [(ngModel)]="selectedEmp.Address" type="text">
-      </p>
-      <p>
-          <input [(ngModel)]="selectedEmp.Salary" type="text">
-      </p>
-      <p>
-        <button class="btn btn-success" style="width: 85px; margin: 5px;">Update</button>
-        <button class="btn btn-danger" style="width: 85px; margin: 5px;">Delete</button>
-      </p>
-      </div>
-    </div>
-  </div>
+<div class="col-md-6">
+<app-emp-details [selectedEmp] = "selectedEmp"></app-emp-details>
 </div>
 </div>

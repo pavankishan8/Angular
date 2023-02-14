@@ -7,6 +7,7 @@ import { ContentComponent } from './Components/content/content.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { CalcComponent } from './Components/calc/calc.component';
 import { MasterComponent } from './Components/master/master.component';
+import { EmpDetailsComponent } from './Components/emp-details/emp-details.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { MasterComponent } from './Components/master/master.component';
     FooterComponent,
     CalcComponent,
     MasterComponent,
+    EmpDetailsComponent,
 
   ],
   imports: [
