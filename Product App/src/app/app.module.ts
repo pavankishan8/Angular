@@ -5,9 +5,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { ContentComponent } from './Components/content/content.component';
 import { FooterComponent } from './Components/footer/footer.component';
-import { CalcComponent } from './Components/calc/calc.component';
-import { MasterComponent } from './Components/master/master.component';
-import { EmpDetailsComponent } from './Components/emp-details/emp-details.component';
+import { ProductMasterComponent } from './Components/product-master/product-master.component';
+import { ProductDetailComponent } from './Components/product-detail/product-detail.component';
+import { AddProductsComponent } from './Components/add-products/add-products.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +15,9 @@ import { EmpDetailsComponent } from './Components/emp-details/emp-details.compon
     HeaderComponent,
     ContentComponent,
     FooterComponent,
-    CalcComponent,
-    MasterComponent,
-    EmpDetailsComponent,
-
+    ProductMasterComponent,
+    ProductDetailComponent,
+    AddProductsComponent
   ],
   imports: [
     BrowserModule,

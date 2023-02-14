@@ -1,0 +1,29 @@
+<nav>
+  <button class="btn btn-secondary" (click)="onShow()">{{btnMessage}}</button>
+</nav>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-9" >
+          <div class="row">
+      <div class="col-md-4" *ngFor="let product of products" id="imag">
+          <img [src]="product.Img" width="200px" height="200px"  alt="Image">
+          <h5>Product: {{product.Name}}</h5>
+          <button (click)="onEdit(product)" class="btn btn-success" style="width: 100px; height: 50px; margin: 5px;">Edit <i class="fa fa-eye"></i></button>
+      </div>
+  </div>
+  </div>
+
+
+
+  <div *ngIf="selectedProd.Name" class="col-md-3" id="Detbox">
+<app-product-detail [selectedProd]="selectedProd" (onDelete)="onDeleteHandler($event)"></app-product-detail>
+  </div>
+  <div *ngIf="toShow" class="col-md-3">
+    <app-add-products (onAddNewProd)="onAddHandler($event)"></app-add-products>
+  </div>
+
+
+
+</div>
+</div>

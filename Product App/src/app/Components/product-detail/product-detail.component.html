@@ -1,0 +1,20 @@
+
+  <h2 id="he2">Details</h2>
+      <div class="row">
+          <p>
+              <input disable type="text" [(ngModel)]="selectedProd.Id" class="btn btn-outline-secondary" style="width: 255px;">
+          </p>
+          <p>
+              <input [(ngModel)]="selectedProd.Name" type="text" class="btn btn-outline-secondary" style="width: 255px;">
+          </p>
+          <p>
+              <input [(ngModel)]="selectedProd.Price" type="text" class="btn btn-outline-secondary" style="width: 255px;">
+          </p>
+          <p>
+              <button class="btn btn-primary" style="margin: 5px; width:115px">Update <i class="fa fa-pen"></i></button>
+              <button (click)="invokeFunc()" class="btn btn-danger" style="margin: 5px; width:115px">Delete <i class="fa fa-trash"></i></button>
+              <!-- <button class="btn btn-warning" style="margin: 5px; width:240px">Add New Product <i class="fa fa-plus"></i></button> -->
+
+            </p>
+      </div>
+

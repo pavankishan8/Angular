@@ -1,0 +1,16 @@
+#he2{
+  text-align: center;
+}
+
+#Detbox{
+  border: solid 2px;
+  border-color:black;
+  border-radius: 10px;
+
+}
+
+#imag{
+  border: solid 2px;
+  padding: 10px;
+  border-radius: 10px;
+}
