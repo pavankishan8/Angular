@@ -1,0 +1,24 @@
+<h2 style="text-align: center;">List of Employees</h2>
+<div class="container">
+  <div class="row">
+<div class="col-md-12">
+  <table class="table-bordered table-striped">
+  <tr style="text-align: center;">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Salary</th>
+    <th>Dept ID</th>
+  </tr>
+  <tr *ngFor="let emp of employees" style="text-align: center;">
+    <td>{{emp.EmpId}}</td>
+    <td>{{emp.EmpName}}</td>
+    <td>{{emp.Address}}</td>
+    <td>{{emp.Salary}}</td>
+    <td>{{emp.DeptId}}</td>
+    <button class="btn btn-primary">View More</button>
+  </tr>
+</table>
+</div>
+  </div>
+</div>
