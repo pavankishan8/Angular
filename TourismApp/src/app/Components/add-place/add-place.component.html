@@ -1,1 +1,26 @@
-<p>add-place works!</p>
+<div id="add" class="container">
+  <h2>Add new Place</h2>
+  <div>
+      <p>
+          <input [(ngModel)]="Name" placeholder="Enter the Place Name" style="margin: 5px" class="btn btn-outline-secondary"/>
+          <input [(ngModel)]="Pin" placeholder="Enter the Pincode" style="margin: 5px" class="btn btn-outline-secondary"/>
+          <input [(ngModel)]="State" placeholder="Enter the State Name" style="margin: 5px" class="btn btn-outline-secondary" />
+          <select [(ngModel)]="Significance" class="btn btn-outline-secondary" style="width:205px;margin: 5px">
+              <option>Historic</option>
+              <option>Religious</option>
+              <option>HillStation</option>
+              <option>Ocean</option>
+              <option>Amusement Park</option>
+          </select>
+      </p>
+
+      <p>
+          <input [(ngModel)]="Description" placeholder="Enter the Desciption" style="width: 855px; height: 150px; margin:5px" class="btn btn-outline-secondary" />
+      </p>
+      <p>
+          <input [(ngModel)]="ImagePath" type="file" (change)= "onSelectFile($event)" class="btn btn-primary" style="width:240px; margin: 5px;"/>
+          <button (click)="onAddNewPlace()" class="btn btn-success" style="width:205px; margin: 5px;">Add Place</button>
+      </p>
+
+  </div>
+</div>

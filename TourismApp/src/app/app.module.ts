@@ -7,6 +7,7 @@ import { AddPlaceComponent } from './Components/add-place/add-place.component';
 import { ViewPlaceComponent } from './Components/view-place/view-place.component';
 import { HttpClientModule} from '@angular/common/http';
 import { EmpComponent } from './Components/emp/emp.component';
+import { PlacePipe } from './Pipes/place.pipe';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { EmpComponent } from './Components/emp/emp.component';
     PlacesComponent,
     AddPlaceComponent,
     ViewPlaceComponent,
-    EmpComponent
+    EmpComponent,
+    PlacePipe
   ],
   imports: [
     BrowserModule,

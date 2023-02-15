@@ -1,23 +1,50 @@
-<div><h2 style="text-align: center;">List of Heaven</h2>
-<div class="container">
+<div id="Show" class="container">
   <div class="row">
-<div class="col-md-6">
-  <table class="table-bordered table-striped">
-  <tr style="text-align: center;">
-    <th>Id</th>
-    <th>Places</th>
-    <th>Details</th>
-  </tr>
-  <tr *ngFor="let tour of tourist" style="text-align: center;">
-    <td>{{tour.PlaceID}}</td>
-    <td>{{tour.Name}}</td>
-    <button class="btn btn-primary">View More</button>
-  </tr>
-</table>
+    <div class="col-md-6">
+        <input type="search" width="55%" [(ngModel)]="searchCondition" placeholder="Search Places" class="search form-control"/>
+    </div>
+    <div class="col-md-6">
+        <button (click)="onAddNew()" class="btn btn-danger">Add New Place</button>
+    </div>
 </div>
+<hr>
+  <div class="row">
+      <div class="col-md-3" *ngFor="let item of tourist | place : searchCondition">
+          <h5>{{item.Name | uppercase}}</h5>
+          <p>
+              <a href="#" (click)="onDetail(item)">View Details</a>
+          </p>
+      </div>
   </div>
-</div>
-<app-emp></app-emp>
+  <hr>
+  <div class="row">
+      <div class="col-md-10">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="row">
+                          <div class="col-md-7">
+                              <h2>{{selectedTourism.Name}}</h2>
+                              <hr>
+                              <p>{{selectedTourism.Description}}</p>
+                              <p><b>{{selectedTourism.State}}</b></p>
+                              <p><b>{{selectedTourism.Significance}}</b></p>
+                          </div>
+                          <div class="col-md-5">
+                            <div class="row">
+                            <p *ngFor="let pic of selectedImages" class="col-md-6">
+                                  <img [src]=pic width="100%" height="150px"/>
+                              </p>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <hr>
+      <div *ngIf="show"><app-add-place></app-add-place></div>
+  </div>
 </div>
 
 
