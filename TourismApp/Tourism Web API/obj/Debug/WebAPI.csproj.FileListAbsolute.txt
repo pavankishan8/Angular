@@ -66,3 +66,6 @@ D:\Starmark-Pavan R\ASP DotNet\Angular Web API\WebAPI\WebAPI\obj\Debug\WebAPI.cs
 D:\Starmark-Pavan R\ASP DotNet\Angular Web API\WebAPI\WebAPI\obj\Debug\WebAPI.csproj.CopyComplete
 D:\Starmark-Pavan R\ASP DotNet\Angular Web API\WebAPI\WebAPI\obj\Debug\WebAPI.dll
 D:\Starmark-Pavan R\ASP DotNet\Angular Web API\WebAPI\WebAPI\obj\Debug\WebAPI.pdb
+D:\Starmark-Pavan R\ASP DotNet\Angular Web API\WebAPI\WebAPI\bin\System.Web.Cors.dll
+D:\Starmark-Pavan R\ASP DotNet\Angular Web API\WebAPI\WebAPI\bin\System.Web.Http.Cors.dll
+D:\Starmark-Pavan R\ASP DotNet\Angular Web API\WebAPI\WebAPI\bin\System.Web.Http.Cors.xml
