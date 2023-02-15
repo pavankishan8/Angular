@@ -1,4 +1,6 @@
-﻿CREATE TABLE Tourism
+﻿use[3342]
+
+CREATE TABLE Tourism
 (
 	PlaceID INT PRIMARY KEY IDENTITY(100,1),
 	Name VARCHAR(100) NOT NULL,
@@ -18,16 +20,20 @@ CREATE TABLE ImageFiles
 )
 GO
 
-insert into Tourism values ('Wonder La', 562109, 'Karnataka', 'Amusement Park', 'Wonderla is the largest chain of amusement parks in India. It is owned and operated by Wonderla Holidays Limited which is headquartered near Bidadi, 28 kilometres (17 mi) from Bengaluru, Karnataka. It operates 3 amusement parks in Kochi, Bengaluru, and Hyderabad.[1]
-
-Wonderla is promoted by Kochouseph Chittilappilly and his son Arun Chittilappilly. The first amusement park project Wonderla Kochi was set up in 2000, followed by the second in Bengaluru in 2005, and finally the third in Hyderabad was commissioned in April 2016.[2] Wonderla is currently planning to open its 4th amusement park in Chennai. Wonderla amusement parks offer a variety of dry rides such as roller coasters, ferris wheels, drop towers and water rides for its customers.' );
+insert into Tourism values ('Jodhpur Fort', 342001, 'Rajasthan', 'Historic', 'Jodhpur is a city in the Thar Desert of the northwest Indian state of Rajasthan. Its 15th-century Mehrangarh Fort is a former palace that’s now a museum, displaying weapons, paintings and elaborate royal palanquins (sedan chairs). Set on on a rocky outcrop, the fort overlooks the walled city, where many buildings are painted the city’s iconic shade of blue.' );
 
 
 select * from Tourism
-insert into ImageFiles values(102,'D:\Starmark-Pavan R\ASP DotNet\Angular Web API\WebAPI\WebAPI\Images\Goa2.jpg');
+insert into ImageFiles values(109,'D:\Starmark-Pavan R\ASP DotNet\Angular Web API\WebAPI\WebAPI\Images\Taj1.jpg');
 
 select * from ImageFiles
 
-insert into Tourism values ('Goa', 403, 'Goa', 'Ocean', 'Goa (/ˈɡoʊə/ (listen)) is a state on the southwestern coast of India within the Konkan region, geographically separated from the Deccan highlands by the Western Ghats.[9][10] It is located between the Indian states of Maharashtra to the north and Karnataka to the east and south, with the Arabian Sea forming its western coast. It is Indias smallest state by area and its fourth-smallest by population. Goa has the highest GDP per capita among all Indian states,[4][11] two and a half times as high as the GDP per capita of the country as a whole.[12] The Eleventh Finance Commission of India named Goa the best-placed state because of its infrastructure, and Indias National Commission on Population rated it as having the best quality of life in India (based on the commissions "12 Indicators").[12] It is the third-highest ranking among Indian states in the human development index.' );
+insert into Tourism values ('Manali', 175131, 'Himachal Pradesh', 'Hillstation', 'Manali is a high-altitude Himalayan resort town in India’s northern Himachal Pradesh state. It has a reputation as a backpacking center and honeymoon destination. Set on the Beas River, it’s a gateway for skiing in the Solang Valley and trekking in Parvati Valley. Its also a jumping-off point for paragliding, rafting and mountaineering in the Pir Panjal mountains, home to 4,000m-high Rohtang Pass.' );
 
 select * from employee
+
+update ImageFiles set PlaceID = 101 where EntryID = 14;
+
+D:\Starmark-Pavan R\ASP DotNet\Angular Web API\WebAPI\WebAPI\Images\Goa.jpg
+
+DELETE from Tourism where PlaceID = 108;
