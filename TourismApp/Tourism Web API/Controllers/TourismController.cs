@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using WebAPI.DataComponents;
 using WebAPI.Models;
@@ -73,6 +74,16 @@ namespace WebAPI.Controllers
             dbContext.SaveChanges();
             place.PlaceID = tPlace.PlaceID;
             return await Task.Run<IHttpActionResult>(() => Ok(place));
+        }
+
+        [ResponseType(typeof(Tourism))]
+        [HttpPost]
+        [Route("api/Places/Tourism")]
+        public async Task<IHttpActionResult> AddNewPlace(Tourism place)
+        {
+            dbContext.Tourism.Add(place);
+            var rows = await dbContext.SaveChangesAsync();
+            return await Task.Run<IHttpActionResult>(() => Ok(rows));
         }
 
         [HttpPost]
