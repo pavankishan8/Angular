@@ -1,6 +1,10 @@
 <div class="container">
   <div class="row">
-      <div class="col-sm-4 my-2" *ngFor="let emp of empList">
+    <ul>
+      <input type="search" width="55%" [(ngModel)]="searchCondition" placeholder="Search Employee" class="search form-control">
+
+    </ul>
+      <div class="col-sm-4 my-2" *ngFor="let emp of empList | employee : searchCondition">
           <div class="card">
               <div class="card-header">
                   <h2>{{emp.empName}}</h2>

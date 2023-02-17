@@ -9,7 +9,7 @@ import { EmployeeService } from 'src/app/Services/employee.service';
   styleUrls: ['./emp-manager.component.css']
 })
 export class EmpManagerComponent implements OnInit{
-
+  searchCondition : string = "";
   empList: Employee[] = [];
 
   constructor(private service : EmployeeService, private router : Router){
